@@ -68,11 +68,30 @@ h2 {
 @media (max-width: 768px) {
   .container {
     margin: auto;
-    background-color: red;
+    /* background-color: red;*/
   }
   ul {
     display: none;
   }
-  nav {
+  #burger {
+    display: block;
   }
+  .hero-text {
+    padding-left: 50px;
+  }
+}
+
+.collection {
+  background-color: green;
+  height: 50vh;
+}
+
+.products {
+  background-color: red;
+  height: 50vh;
+}
+
+.philosophy {
+  background-color: blue;
+  height: 50vh;
 }
