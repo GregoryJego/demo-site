@@ -10,8 +10,9 @@
   </head>
 
   <body>
-    <section class="container">
-      <h1>
+    <!--------------------- NAV --------------------->
+    <header>
+      <h1 class="logo">
         BRIGHTLIGHT<svg
           xmlns="http://www.w3.org/2000/svg"
           width="28"
@@ -33,65 +34,73 @@
           <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
         </svg>
       </h1>
-
+      <svg
+        id="burger"
+        display="none"
+        xmlns="http://www.w3.org/2000/svg"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
       <nav>
-        <svg
-          id="burger"
-          display="none"
-          xmlns="http://www.w3.org/2000/svg"
-          width="36"
-          height="36"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-        <ul>
-          <li>Collection</li>
-          <li>Products</li>
-          <li>Philosophy</li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 002-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 11-8 0"
-              ></path>
-            </svg>
-          </li>
+        <!-- raccourci clavier pour afficher plusieurs li en une fois : ul>li*3  -->
+        <ul class="menu">
+          <li class="menu-items"><a href="#">Collection</a></li>
+          <li class="menu-items"><a href="#">Products</a></li>
+          <li class="menu-items"><a href="#">Philosophy</a></li>
         </ul>
+        <div class="cart-item">
+          <div class="count">2</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="10" cy="20.5" r="1" />
+            <circle cx="18" cy="20.5" r="1" />
+            <path
+              d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"
+            />
+          </svg>
+        </div>
       </nav>
+    </header>
+    <!--------------------- HERO --------------------->
+    <section class="hero">
+      <h2>
+        Lorem ipsum dolor sit amet
+      </h2>
     </section>
-    <section class="hero-image">
-      <div class="hero-text">
-        <h2>
-          Lorem ipsum dolor sit amet
-        </h2>
+    <!--------------------- COLLECTION --------------------->
+    <section class="collection">
+      <div class="title">
+        Collection
       </div>
     </section>
-    <section class="collection">
-      <div>COLLECTION</div>
-    </section>
+    <!--------------------- PRODUCTS --------------------->
     <section class="products">
       <div>PRODUCTS</div>
     </section>
+    <!--------------------- PHILOSOPHY --------------------->
     <section class="philosophy">
       <div>PHILOSOPHY</div>
     </section>
+    <!--------------------- FOOTER --------------------->
     <footer>EMAIL</footer>
     <script src="./js/main.js"></script>
   </body>

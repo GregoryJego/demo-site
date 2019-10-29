@@ -1,89 +1,144 @@
+/* --------------------- IMPORT --------------------- */
+
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,700|Space+Mono:400,700&display=swap");
+/* font-family: 'Space Mono', monospace;
+font-family: 'DM Sans', sans-serif; */
+
+/* --------------------- DEBUG --------------------- */
+
+[debug],
+[debug] * {
+  outline: solid 1px blue;
+  box-shadow: none;
+  filter: none;
+}
+
+/* --------------------- GLOBAL RULES --------------------- */
+
+:root {
+  --black: #000;
+  --linearOrange: rgba(250, 110, 35, 0.5);
+  --linearYellow: rgba(255, 200, 50, 0.5);
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "DM Sans", "Noto Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  /* La 2ème font est chargée si la première ne l'est pas */
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--black);
 }
 
-h1 {
-  font-size: 2em;
+a {
+  color: black;
+  text-decoration: none;
 }
 
-.container {
+/* --------------------- NAVIGATION --------------------- */
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #faf9f5;
-  /* padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px; */
-  padding: 15px 50px;
+  padding: 1rem 3rem;
+  font-family: "Space Mono", monospace;
 }
 
-ul {
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+nav {
   display: flex;
-  /* background-color: red; */
-  /* width: 300px; */
-  justify-content: space-between;
   align-items: center;
 }
 
-li:not(:last-child) {
-  padding-right: 10px;
+.menu {
+  display: flex;
 }
 
-h1 {
-  /* background-color: yellow;
-  border-style: solid;
-  border-width: 1px; */
-  font-family: "Trebuchet MS";
-  font-size: bold;
+.menu-items {
+  margin-right: 20px;
+  font-size: 1.1rem;
 }
 
-h2 {
-  font-family: "Trebuchet MS";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 120%;
+.cart-item {
+  display: flex;
+  position: relative;
 }
 
-.hero-image {
+.count {
+  display: flex;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffcc33;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  border-radius: 50%;
+}
+
+/* --------------------- HERO --------------------- */
+
+.hero {
   height: 50vh;
-  background-image: url("https://images.unsplash.com/photo-1499018658500-b21c72d7172b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-image: linear-gradient(
+      to bottom,
+      var(--linearOrange),
+      var(--linearYellow)
+    ),
+    url("https://images.unsplash.com/photo-1499018658500-b21c72d7172b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* padding-left: 50px;
-  padding-right: 50px; */
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero-text {
+h2 {
+  font-weight: 700;
+  font-size: 5vw;
+  line-height: 120%;
   color: white;
 }
+
+/* --------------------- COLLECTION --------------------- */
+
+.title {
+  background-color: #f87624;
+  border-radius: 5px;
+}
+
+.collection {
+  background-color: green;
+  height: 50vh;
+}
+
+/* --------------------- RESIZE --------------------- */
 
 @media (max-width: 768px) {
   .container {
     margin: auto;
     /* background-color: red;*/
   }
-  ul {
+  nav {
     display: none;
   }
   #burger {
-    display: block;
+    display: flex;
   }
   .hero-text {
     padding-left: 50px;
   }
-}
-
-.collection {
-  background-color: green;
-  height: 50vh;
 }
 
 .products {
