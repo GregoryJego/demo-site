@@ -13,7 +13,7 @@
     <!--------------------- NAV --------------------->
     <header>
       <h1 class="logo">
-        BRIGHTLIGHT<svg
+        BRIGHTLIGHT<svg class="darkmode"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="28"
@@ -33,7 +33,7 @@
           <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
           <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
         </svg>
-      </h1>
+</h1>
       <svg
         id="burger"
         display="none"
@@ -59,7 +59,7 @@
           <li class="menu-items"><a href="#">Philosophy</a></li>
         </ul>
         <div class="cart-item">
-          <div class="count">2</div>
+          <div id ="count" class="count">0</div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -144,31 +144,88 @@
       </div>
     </section>
     <!--------------------- PRODUCTS --------------------->
+    <script>
+    let basket = 0;
+
+    const addItem = () => {
+
+          basket++;
+        console.log("Ajout d'un item");
+        document.getElementById("count").innerHTML= basket;
+        document.getElementById("button").className = "disabled";
+
+        };
+        </script>
+
+
     <section class="products">
       <div class="section-top-bar">
         <a href="#"> <h3 class="section-category">Products</h3></a>
-        <div class="pastille" style="text-align: center;">
-          Spring Summer Collection
+        <div class="product-badge">
+          <span>Spring Summer Collection</span>
         </div>
       </div>
-      <div class="product-list">
-        <div class="product">
-          <div class="product-info">
-            <div style="font-weight: bold;">Allen</div>
-            <div>Color</div>
-            <div>$98.00</div>
-            <button>Add to cart</button>
-          </div>
-          <div class="product-img"></div>
-        </div>
+              <!-- items -->
+      <div class="product-items">
+        <!-- item 01 -->
+        <div class="product-item">
+            <div class="product-info">
+                <span style="font-weight: bold;">Allen</span>
+                <span>Color</span>
+                <span>$90.00</span>
+                <button id="button" class="addToCart" onclick="if (className !== 'disabled')addItem()">Add to cart</button>
+              </div>
+          <img src="./images/product.jpg" alt="product" />
+</div>
+        <!-- item 02 -->
+        <div class="product-item">
+            <div class="product-info">
+                <span style="font-weight: bold;">Allen</span>
+                <span>Color</span>
+                <span>$90.00</span>
+                <button id="button" class="addToCart" onclick="if (className !== 'disabled')addItem()">Add to cart</button>
+              </div>
+          <img src="./images/product.jpg" alt="product" />
+</div>
+<!-- item 03 -->
+<div class="product-item">
+    <div class="product-info">
+        <span style="font-weight: bold;">Allen</span>
+        <span>Color</span>
+        <span>$90.00</span>
+        <button id="button" class="addToCart" onclick="if (className !== 'disabled')addItem()">Add to cart</button>
       </div>
+  <img src="./images/product.jpg" alt="product" />
+</div>
+
+      </div>
+        <button class="browse">Browse all</button>
     </section>
     <!--------------------- PHILOSOPHY --------------------->
     <section class="philosophy">
-      PHILOSOPHY
+      <div>
+        <h3>Our Philosophy</h3>
+        <p>
+          We want to provide you with the possibility to match your frames with
+          every occasion and all of your favourite styles...
+        </p>
+        <button class="read more">Read more</button>
+      </div>
+    </section>
+    <!--------------------- NEWSLETTER --------------------->
+    <section class="newsletter">
+      <p>Sign up for our newsletter and stay informed</p>
+      <div class="block">
+        <input value="you@email.com"></input>
+        <button>></button>
+      </div>
     </section>
     <!--------------------- FOOTER --------------------->
-    <footer>EMAIL</footer>
+    <footer>
+      <p>BrightLight 2019</p>
+      <p>Made at le Reacteur</p>
+<div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#000"><path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#000"><path d="M24 4.37a9.6 9.6 0 0 1-2.83.8 5.04 5.04 0 0 0 2.17-2.8c-.95.58-2 1-3.13 1.22A4.86 4.86 0 0 0 16.61 2a4.99 4.99 0 0 0-4.79 6.2A13.87 13.87 0 0 1 1.67 2.92 5.12 5.12 0 0 0 3.2 9.67a4.82 4.82 0 0 1-2.23-.64v.07c0 2.44 1.7 4.48 3.95 4.95a4.84 4.84 0 0 1-2.22.08c.63 2.01 2.45 3.47 4.6 3.51A9.72 9.72 0 0 1 0 19.74 13.68 13.68 0 0 0 7.55 22c9.06 0 14-7.7 14-14.37v-.65c.96-.71 1.79-1.6 2.45-2.61z"/></svg></div>
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
