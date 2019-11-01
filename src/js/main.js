@@ -20,19 +20,19 @@ button.addEventListener("click", () => {
   });
 });
 
-const burger = document.querySelector(".burger");
-
-burger.addEventListener("click", () => {
-  document
-    .querySelector(".menu-burger")
-    .classList.toggle("menu-burger-activated");
-});
-
 const cross = document.querySelector(".cross");
 
 cross.addEventListener("click", () => {
   document.querySelector(".shipping-bar").classList.toggle("hide");
 });
+
+// const burger = document.querySelector(".burger");
+
+// burger.addEventListener("click", () => {
+//   document
+//     .querySelector(".menu-burger")
+//     .classList.toggle("menu-burger-activated");
+// });
 
 let basket = 0;
 
