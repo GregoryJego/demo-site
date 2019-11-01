@@ -574,7 +574,7 @@ footer.darkmode {
 /* --------------------- RESIZE --------------------- */
 
 @media (max-width: 768px) {
-  #burger {
+  .burger {
     display: flex;
   }
 
