@@ -641,6 +641,8 @@ footer.darkmode {
     font-size: 1rem;
   }
   .addToCart {
-    font-size: 1.05rem;
+    text-transform: uppercase;
+    width: 5rem;
+    height: 2rem;
   }
 }

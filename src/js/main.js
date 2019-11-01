@@ -1,16 +1,5 @@
 // console.log('it works')
 
-let basket = 0;
-
-const buttonAddCart = document.querySelectorAll(".addToCart").forEach(item => {
-  item.addEventListener("click", () => {
-    basket++;
-    document.querySelectorAll(".count").forEach(item2 => {
-      item2.innerHTML = basket;
-    });
-  });
-});
-
 const button = document.querySelector(".logo");
 
 button.addEventListener("click", () => {
@@ -43,4 +32,15 @@ const cross = document.querySelector(".cross");
 
 cross.addEventListener("click", () => {
   document.querySelector(".shipping-bar").classList.toggle("hide");
+});
+
+let basket = 0;
+
+const buttonAddCart = document.querySelectorAll(".addToCart").forEach(item => {
+  item.addEventListener("click", () => {
+    basket++;
+    document.querySelectorAll(".count").forEach(item2 => {
+      item2.innerHTML = basket;
+    });
+  });
 });
