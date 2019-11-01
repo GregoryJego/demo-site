@@ -93,6 +93,10 @@ header.darkmode {
   display: none;
 }
 
+.burger.show {
+  display: flex;
+}
+
 .menu-burger.menu-burger-activated {
   display: flex;
   position: absolute;
@@ -599,7 +603,6 @@ footer.darkmode {
 
   .burger {
     display: flex;
-    background-color: red;
   }
   .hero-text {
     padding-left: 50px;
@@ -643,6 +646,6 @@ footer.darkmode {
   .addToCart {
     text-transform: uppercase;
     width: 5rem;
-    height: 2rem;
+    height: 2.5rem;
   }
 }
