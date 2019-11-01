@@ -593,6 +593,7 @@ footer.darkmode {
 
   .burger {
     display: flex;
+    background-color: red;
   }
   .hero-text {
     padding-left: 50px;
