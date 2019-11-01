@@ -109,16 +109,27 @@ header.darkmode {
 }
 
 .menu-burger.menu-burger-activated {
+  transition: transform 0.3s ease-in;
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  /* border: 1px solid var(--white); */
   background-color: var(--grey);
-  padding-right: 1rem;
+}
+
+.menu-burger a {
+  border-top: 1px solid grey;
+  padding-left: 2rem;
   font-size: 1.2rem;
-  top: 4.2rem;
-  right: 0;
-  padding-left: 0.5rem;
+  font-family: "Gill Sans", "Gill Sans MT";
+  width: 100%;
+}
+
+.menu-burger a:hover {
+  background-color: var(--linearOrange);
 }
 
 .addToCart {
@@ -136,7 +147,7 @@ header.darkmode {
 
 .logo {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Gill Sans", "Gill Sans MT";
   text-transform: uppercase;
   cursor: pointer;
@@ -165,7 +176,7 @@ nav {
 
 .menu-items {
   margin-right: 20px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .cart-item {
@@ -210,7 +221,7 @@ nav {
 }
 
 .main-title {
-  font-size: 10vw;
+  font-size: 8vw;
   font-weight: bold;
   color: var(--white);
   padding: 2rem;
@@ -587,6 +598,7 @@ footer.darkmode {
 @media (max-width: 768px) {
   .burger {
     display: flex;
+    cursor: pointer;
   }
 
   body {
@@ -615,15 +627,15 @@ footer.darkmode {
     font-size: 1.2rem;
   }
   .logo {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
   }
   .logo svg {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.9rem;
+    height: 1.9rem;
   }
 
   .main-title {
-    font-size: 14vw;
+    font-size: 12vw;
   }
   .philosophy h3 {
     font-size: 2rem;

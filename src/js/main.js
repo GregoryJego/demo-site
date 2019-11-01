@@ -10,6 +10,13 @@ window.onscroll = () => {
   ScrollIndicator();
 };
 
+window.onresize = () => {
+  if (window.innerWidth > 768)
+    document
+      .querySelector(".menu-burger")
+      .classList.remove("menu-burger-activated");
+};
+
 const ScrollIndicator = () => {
   console.log(window.scrollY);
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
