@@ -28,12 +28,6 @@ cross.addEventListener("click", () => {
   document.querySelector(".shipping-bar").classList.toggle("hide");
 });
 
-burger.addEventListener("click", () => {
-  document
-    .querySelector(".menu-burger")
-    .classList.toggle("menu-burger-activated");
-});
-
 buttonAddCart.forEach(item => {
   item.addEventListener("click", () => {
     basket++;
@@ -41,4 +35,10 @@ buttonAddCart.forEach(item => {
       item2.innerHTML = basket;
     });
   });
+});
+
+burger.addEventListener("click", () => {
+  document
+    .querySelector(".menu-burger")
+    .classList.toggle("menu-burger-activated");
 });

@@ -93,8 +93,8 @@ header.darkmode {
   display: none;
 }
 
-.burger.show {
-  display: flex;
+.burger {
+  display: none;
 }
 
 .menu-burger.menu-burger-activated {
