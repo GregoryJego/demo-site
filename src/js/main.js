@@ -4,6 +4,7 @@ let button = document.querySelector(".logo");
 let cross = document.querySelector(".cross");
 let buttonAddCart = document.querySelectorAll(".addToCart");
 let basket = 0;
+let burger = document.querySelector(".burger");
 
 button.addEventListener("click", () => {
   document.querySelector("header").classList.toggle("darkmode");
@@ -27,13 +28,11 @@ cross.addEventListener("click", () => {
   document.querySelector(".shipping-bar").classList.toggle("hide");
 });
 
-// const burger = document.querySelector(".burger");
-
-// burger.addEventListener("click", () => {
-//   document
-//     .querySelector(".menu-burger")
-//     .classList.toggle("menu-burger-activated");
-// });
+burger.addEventListener("click", () => {
+  document
+    .querySelector(".menu-burger")
+    .classList.toggle("menu-burger-activated");
+});
 
 buttonAddCart.forEach(item => {
   item.addEventListener("click", () => {
