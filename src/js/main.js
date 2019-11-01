@@ -11,7 +11,7 @@ const buttonAddCart = document.querySelectorAll(".addToCart").forEach(item => {
   });
 });
 
-const button = document.querySelector(".btn-darkmode");
+const button = document.querySelector(".logo");
 
 const burger = document.querySelector(".burger");
 
@@ -30,7 +30,7 @@ burger.addEventListener("click", () => {
 button.addEventListener("click", () => {
   document.querySelector("header").classList.toggle("darkmode");
   document.querySelector(".menu-burger").classList.toggle("darkmode");
-  document.querySelector(".btn-darkmode").classList.toggle("darkmode");
+  document.querySelector(".svg-darkmode").classList.toggle("darkmode");
   document.querySelector(".count").classList.toggle("darkmode");
   document.querySelector(".logo").classList.toggle("darkmode");
   document.querySelector(".hero").classList.toggle("darkmode");

@@ -125,11 +125,11 @@ nav {
   color: var(--white);
 }
 
-.btn-darkmode {
+.svg-darkmode {
   transition: transform 0.3s ease-in;
 }
 
-.btn-darkmode.darkmode {
+.svg-darkmode.darkmode {
   transform: rotate(45deg);
 }
 
