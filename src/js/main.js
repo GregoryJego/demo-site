@@ -2,13 +2,6 @@
 
 const button = document.querySelector(".logo");
 
-const showburgermenu = () => {
-  if (window.screen.width < 768)
-    document.querySelector(".burger").classList.toggle("show");
-};
-
-showburgermenu();
-
 button.addEventListener("click", () => {
   document.querySelector("header").classList.toggle("darkmode");
   document.querySelector(".menu-burger").classList.toggle("darkmode");

@@ -569,12 +569,17 @@ footer.darkmode {
 /* --------------------- RESIZE --------------------- */
 
 @media (max-width: 768px) {
+  #burger {
+    display: flex;
+  }
+
   body {
     margin: auto;
   }
   nav {
     display: none;
   }
+
   .collection-item img {
     width: 300px;
   }
@@ -601,9 +606,6 @@ footer.darkmode {
     height: 1.6rem;
   }
 
-  .burger {
-    display: flex;
-  }
   .hero-text {
     padding-left: 50px;
   }
