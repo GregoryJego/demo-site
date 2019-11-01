@@ -1,6 +1,9 @@
 // console.log('it works')
 
-const button = document.querySelector(".logo");
+let button = document.querySelector(".logo");
+let cross = document.querySelector(".cross");
+let buttonAddCart = document.querySelectorAll(".addToCart");
+let basket = 0;
 
 button.addEventListener("click", () => {
   document.querySelector("header").classList.toggle("darkmode");
@@ -20,8 +23,6 @@ button.addEventListener("click", () => {
   });
 });
 
-const cross = document.querySelector(".cross");
-
 cross.addEventListener("click", () => {
   document.querySelector(".shipping-bar").classList.toggle("hide");
 });
@@ -34,9 +35,7 @@ cross.addEventListener("click", () => {
 //     .classList.toggle("menu-burger-activated");
 // });
 
-let basket = 0;
-
-const buttonAddCart = document.querySelectorAll(".addToCart").forEach(item => {
+buttonAddCart.forEach(item => {
   item.addEventListener("click", () => {
     basket++;
     document.querySelectorAll(".count").forEach(item2 => {
