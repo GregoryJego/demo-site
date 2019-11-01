@@ -1,11 +1,31 @@
 // console.log('it works')
 
-let button = document.querySelector(".darkmode");
+let basket = 0;
 
-const darkmode = () => {
-  button.classList.toggle();
-};
+const buttonAddCart = document.querySelectorAll(".addToCart").forEach(item => {
+  item.addEventListener("click", () => {
+    basket++;
+    document.querySelectorAll(".count").forEach(item2 => {
+      item2.innerHTML = basket;
+    });
+  });
+});
 
-console.log("Voici le bouton recherché : " + button);
+const button = document.querySelector(".btn-darkmode");
 
-button.addEventListener("click", darkmode());
+button.addEventListener("click", () => {
+  document.querySelector("header").classList.toggle("darkmode");
+  document.querySelector(".btn-darkmode").classList.toggle("darkmode");
+  document.querySelector(".count").classList.toggle("darkmode");
+  document.querySelector(".logo").classList.toggle("darkmode");
+  document.querySelector(".hero").classList.toggle("darkmode");
+  document.querySelectorAll("a").forEach(item => {
+    item.classList.toggle("darkmode");
+  });
+  document.querySelector(".box").classList.toggle("darkmode");
+  document.querySelector("footer").classList.toggle("darkmode");
+  document.querySelector(".products").classList.toggle("darkmode");
+  document.querySelectorAll(".section-category").forEach(item => {
+    item.classList.toggle("darkmode");
+  });
+});

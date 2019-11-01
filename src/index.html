@@ -4,22 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Brightlight</title>
+    <title>SNEAKERS</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-
   <body>
     <!--------------------- NAV --------------------->
     <header>
       <h1 class="logo">
-        BRIGHTLIGHT<svg class="darkmode"
+        SNEAKERS<svg class="btn-darkmode"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="28"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#000000"
+          stroke="currentColor"
           stroke-width="3"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -42,7 +41,7 @@
         height="36"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#000000"
+        stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -54,19 +53,19 @@
       <nav>
         <!-- raccourci clavier pour afficher plusieurs li en une fois : ul>li*3  -->
         <ul class="menu">
-          <li class="menu-items"><a href="#">Collection</a></li>
-          <li class="menu-items"><a href="#">Products</a></li>
-          <li class="menu-items"><a href="#">Philosophy</a></li>
+          <li class="menu-items"><a href="#collection">Collection</a></li>
+          <li class="menu-items"><a href="#products">Products</a></li>
+          <li class="menu-items"><a href="#philosophy">Philosophy</a></li>
         </ul>
         <div class="cart-item">
-          <div id ="count" class="count">0</div>
+          <div class="count">0</div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#000000"
+            stroke="currentColor"
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -82,12 +81,32 @@
     </header>
     <!--------------------- HERO --------------------->
     <section class="hero">
-      <h2>
-        Lorem ipsum dolor sit amet
+      <h2 class="main-title">
+        Forever faster
       </h2>
     </section>
     <!--------------------- COLLECTION --------------------->
-    <section class="collection">
+    <section class="collection" id="collection">
+      <!-- shipping bar -->
+      <div class="shipping-bar">
+          <p>Free shipping</p>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </a>
+        </div>
       <div class="section-top-bar">
         <a href="#"> <h3 class="section-category">Collection</h3></a>
         <a href="#" class="see-more">
@@ -119,46 +138,32 @@
         </div>
         <!-- item 02 -->
         <div class="collection-item">
-          <img src="../src/images/portrait01.jpg" alt="photo collection 02" />
+          <img src="../src/images/portrait02.jpg" alt="photo collection 02" />
           <div class="collection-info">
-            <h3>Best Sellers</h3>
+            <h3>Classics</h3>
             <a href="#">Explore</a>
           </div>
         </div>
         <!-- item 03 -->
         <div class="collection-item">
-          <img src="../src/images/portrait01.jpg" alt="photo collection 03" />
+          <img src="../src/images/portrait03.jpg" alt="photo collection 03" />
           <div class="collection-info">
-            <h3>Best Sellers</h3>
+            <h3>New Styles</h3>
             <a href="#">Explore</a>
           </div>
         </div>
         <!-- item 04 -->
         <div class="collection-item">
-          <img src="../src/images/portrait01.jpg" alt="photo collection 03" />
+          <img src="../src/images/portrait04.jpg" alt="photo collection 03" />
           <div class="collection-info">
-            <h3>Best Sellers</h3>
+            <h3>Urban</h3>
             <a href="#">Explore</a>
           </div>
         </div>
       </div>
     </section>
     <!--------------------- PRODUCTS --------------------->
-    <script>
-    let basket = 0;
-
-    const addItem = () => {
-
-          basket++;
-        console.log("Ajout d'un item");
-        document.getElementById("count").innerHTML= basket;
-        document.getElementById("button").className = "disabled";
-
-        };
-        </script>
-
-
-    <section class="products">
+    <section class="products" id="products">
       <div class="section-top-bar">
         <a href="#"> <h3 class="section-category">Products</h3></a>
         <div class="product-badge">
@@ -171,52 +176,52 @@
         <div class="product-item">
             <div class="product-info">
                 <span style="font-weight: bold;">Allen</span>
-                <span>Color</span>
+                <div class="colors"><p>Color</p><span class="color1"></span><span class="color2"></span><span class="color3"></span></div>
                 <span>$90.00</span>
-                <button id="button" class="addToCart" onclick="if (className !== 'disabled')addItem()">Add to cart</button>
+                <button class="addToCart"><span>Add to cart</span></button>
               </div>
-          <img src="./images/product.jpg" alt="product" />
+          <img src="./images/product01.jpg" alt="product" />
 </div>
         <!-- item 02 -->
         <div class="product-item">
             <div class="product-info">
                 <span style="font-weight: bold;">Allen</span>
-                <span>Color</span>
-                <span>$90.00</span>
-                <button id="button" class="addToCart" onclick="if (className !== 'disabled')addItem()">Add to cart</button>
+                <div class="colors"><p>Color</p><span class="color1"></span><span class="color3"></span></div>
+                <span>$95.00</span>
+                <button class="addToCart"><span>Add to cart</span></button>
               </div>
-          <img src="./images/product.jpg" alt="product" />
+          <img src="./images/product02.jpg" alt="product" />
 </div>
 <!-- item 03 -->
 <div class="product-item">
     <div class="product-info">
         <span style="font-weight: bold;">Allen</span>
-        <span>Color</span>
-        <span>$90.00</span>
-        <button id="button" class="addToCart" onclick="if (className !== 'disabled')addItem()">Add to cart</button>
+        <div class="colors"><p>Color</p><span class="color1"></span><span class="color2"></span></div>
+        <span>$85.00</span>
+        <button id="button" class="addToCart" onclick="addItem()"><span>Add to cart</span></button>
       </div>
-  <img src="./images/product.jpg" alt="product" />
+  <img src="./images/product03.jpg" alt="product" />
 </div>
 
       </div>
         <button class="browse">Browse all</button>
     </section>
     <!--------------------- PHILOSOPHY --------------------->
-    <section class="philosophy">
-      <div>
+    <section class="philosophy" id="philosophy">
+      <div class="box">
         <h3>Our Philosophy</h3>
         <p>
           We want to provide you with the possibility to match your frames with
           every occasion and all of your favourite styles...
         </p>
-        <button class="read more">Read more</button>
+        <button class="read">Read more</button>
       </div>
     </section>
     <!--------------------- NEWSLETTER --------------------->
     <section class="newsletter">
       <p>Sign up for our newsletter and stay informed</p>
       <div class="block">
-        <input value="you@email.com"></input>
+        <input placeholder="you@email.com"></input>
         <button>></button>
       </div>
     </section>
@@ -224,7 +229,7 @@
     <footer>
       <p>BrightLight 2019</p>
       <p>Made at le Reacteur</p>
-<div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#000"><path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#000"><path d="M24 4.37a9.6 9.6 0 0 1-2.83.8 5.04 5.04 0 0 0 2.17-2.8c-.95.58-2 1-3.13 1.22A4.86 4.86 0 0 0 16.61 2a4.99 4.99 0 0 0-4.79 6.2A13.87 13.87 0 0 1 1.67 2.92 5.12 5.12 0 0 0 3.2 9.67a4.82 4.82 0 0 1-2.23-.64v.07c0 2.44 1.7 4.48 3.95 4.95a4.84 4.84 0 0 1-2.22.08c.63 2.01 2.45 3.47 4.6 3.51A9.72 9.72 0 0 1 0 19.74 13.68 13.68 0 0 0 7.55 22c9.06 0 14-7.7 14-14.37v-.65c.96-.71 1.79-1.6 2.45-2.61z"/></svg></div>
+<div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.37a9.6 9.6 0 0 1-2.83.8 5.04 5.04 0 0 0 2.17-2.8c-.95.58-2 1-3.13 1.22A4.86 4.86 0 0 0 16.61 2a4.99 4.99 0 0 0-4.79 6.2A13.87 13.87 0 0 1 1.67 2.92 5.12 5.12 0 0 0 3.2 9.67a4.82 4.82 0 0 1-2.23-.64v.07c0 2.44 1.7 4.48 3.95 4.95a4.84 4.84 0 0 1-2.22.08c.63 2.01 2.45 3.47 4.6 3.51A9.72 9.72 0 0 1 0 19.74 13.68 13.68 0 0 0 7.55 22c9.06 0 14-7.7 14-14.37v-.65c.96-.71 1.79-1.6 2.45-2.61z"/></svg></div>
     </footer>
     <script src="./js/main.js"></script>
   </body>
