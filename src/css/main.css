@@ -574,6 +574,9 @@ footer.darkmode {
   .section-category {
     font-size: 1.3rem;
   }
+  .section-top-bar {
+    padding: 0.5rem;
+  }
   .see-more {
     font-size: 1.2rem;
   }
