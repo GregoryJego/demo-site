@@ -110,6 +110,11 @@ header.darkmode {
   padding-left: 0.5rem;
 }
 
+.addToCart {
+  font-size: 1.1rem;
+  height: 3rem;
+}
+
 .menu-burger.darkmode {
   background-color: var(--black);
 }
