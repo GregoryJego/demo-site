@@ -283,6 +283,10 @@ nav {
   margin-left: 0.5rem;
 }
 
+.collection.darkmode {
+  background-color: ;
+}
+
 .collection-items {
   display: flex;
   margin: 4rem 0;
@@ -543,6 +547,10 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
+}
+
+.newsletter.darkmode {
+  background-color: var(--grey);
 }
 
 .newsletter p {

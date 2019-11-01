@@ -25,7 +25,7 @@ const ScrollIndicator = () => {
     document.documentElement.clientHeight;
   let scrolled = (winScroll / height) * 100;
   document.querySelector(".progress-bar").style.width = scrolled + "%";
-  if (window.scrollY !== 0)
+  if (Math.round(scrolled) > 0)
     document.querySelector(".progress-bar").innerHTML =
       Math.round(scrolled) + "%";
   else document.querySelector(".progress-bar").innerHTML = "";
@@ -37,6 +37,8 @@ button.addEventListener("click", () => {
   document.querySelector(".svg-darkmode").classList.toggle("darkmode");
   document.querySelector(".count").classList.toggle("darkmode");
   document.querySelector(".logo").classList.toggle("darkmode");
+  document.querySelector(".collection").classList.toggle("darkmode");
+  document.querySelector(".newsletter").classList.toggle("darkmode");
   document.querySelector(".hero").classList.toggle("darkmode");
   document.querySelectorAll("a").forEach(item => {
     item.classList.toggle("darkmode");
