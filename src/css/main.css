@@ -623,6 +623,9 @@ footer.darkmode {
   footer p {
     margin-bottom: 1rem;
   }
+  .icons svg {
+    margin-right: 0;
+  }
   .collection-items {
     margin: 2rem 0;
     padding: 0 2rem;
