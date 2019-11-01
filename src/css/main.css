@@ -71,6 +71,7 @@ header {
   align-items: center;
   background-color: var(--grey);
   padding: 1rem 3rem;
+  position: relative;
 }
 
 .darkmode {
@@ -79,6 +80,31 @@ header {
 
 header.darkmode {
   background-color: var(--black);
+  color: var(--white);
+}
+
+.menu-burger {
+  display: none;
+}
+
+.menu-burger.menu-burger-activated {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--grey);
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  top: 4.2rem;
+  right: 0;
+  padding-left: 0.5rem;
+}
+
+.menu-burger.darkmode {
+  background-color: var(--black);
+}
+
+.menu-burger.darkmode a {
   color: var(--white);
 }
 
@@ -163,6 +189,8 @@ nav {
   color: var(--white);
   padding: 3rem;
   stroke: 1rem;
+  text-shadow: 0 0 2px var(--black);
+  text-align: center;
 }
 
 /* --------------------- COLLECTION --------------------- */
@@ -184,6 +212,10 @@ nav {
 .shipping-bar p {
   flex: 1;
   text-align: center;
+}
+
+.shipping-bar.hide {
+  display: none;
 }
 
 .shipping-bar svg {
@@ -552,11 +584,11 @@ footer.darkmode {
     font-size: 1.4rem;
   }
   .logo svg {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
-  #burger {
+  .burger {
     display: flex;
   }
   .hero-text {
