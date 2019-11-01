@@ -69,6 +69,17 @@ button:focus:active {
   box-shadow: none;
 }
 
+.progress-bar {
+  position: fixed;
+  height: 1.2rem;
+  background: var(--orange);
+  color: var(--black);
+  font-size: 1rem;
+  width: 0%;
+  z-index: 20;
+  text-align: center;
+}
+
 /* --------------------- NAVIGATION --------------------- */
 
 header {
@@ -194,18 +205,18 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .main-title {
-  font-size: 8vw;
+  font-size: 10vw;
   font-weight: bold;
   color: var(--white);
-  padding: 3rem;
+  padding: 2rem;
   stroke: 1rem;
   text-shadow: 0 0 2px var(--black);
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* --------------------- COLLECTION --------------------- */
@@ -611,12 +622,8 @@ footer.darkmode {
     height: 1.6rem;
   }
 
-  .hero-text {
-    padding-left: 50px;
-  }
-
   .main-title {
-    font-size: 12vw;
+    font-size: 14vw;
   }
   .philosophy h3 {
     font-size: 2rem;
@@ -643,7 +650,7 @@ footer.darkmode {
   .icons svg {
     margin-right: 0;
   }
-  .icons{
+  .icons {
     width: 5rem;
     justify-content: space-between;
   }

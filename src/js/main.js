@@ -6,6 +6,24 @@ let buttonAddCart = document.querySelectorAll(".addToCart");
 let basket = 0;
 let burger = document.querySelector(".burger");
 
+window.onscroll = () => {
+  ScrollIndicator();
+};
+
+const ScrollIndicator = () => {
+  console.log(window.scrollY);
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  document.querySelector(".progress-bar").style.width = scrolled + "%";
+  if (window.scrollY !== 0)
+    document.querySelector(".progress-bar").innerHTML =
+      Math.round(scrolled) + "%";
+  else document.querySelector(".progress-bar").innerHTML = "";
+};
+
 button.addEventListener("click", () => {
   document.querySelector("header").classList.toggle("darkmode");
   document.querySelector(".menu-burger").classList.toggle("darkmode");
