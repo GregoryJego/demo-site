@@ -63,6 +63,12 @@ button:focus:active {
   box-shadow: none;
 }
 
+.logo:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+
 /* --------------------- NAVIGATION --------------------- */
 
 header {
@@ -630,5 +636,11 @@ footer.darkmode {
   .collection-items {
     margin: 2rem 0;
     padding: 0 2rem;
+  }
+  .product-info {
+    font-size: 1rem;
+  }
+  .addToCart {
+    font-size: 1.05rem;
   }
 }
