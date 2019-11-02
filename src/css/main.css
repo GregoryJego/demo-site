@@ -18,6 +18,7 @@ font-family: 'DM Sans', sans-serif; */
 :root {
   --black: #1e1e1e;
   --grey: #faf9f5;
+  --darkgrey: #bebebe;
   --white: #ffffff;
   --yellow: #ffcc33;
   --orange: #f87624;
@@ -284,7 +285,7 @@ nav {
 }
 
 .collection.darkmode {
-  background-color: ;
+  background-color: var(--darkgrey);
 }
 
 .collection-items {
@@ -550,7 +551,7 @@ nav {
 }
 
 .newsletter.darkmode {
-  background-color: var(--grey);
+  background-color: var(--darkgrey);
 }
 
 .newsletter p {
