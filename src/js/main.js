@@ -27,14 +27,14 @@ const ScrollIndicator = () => {
   if (Math.round(scrolled) > 0)
     if (Math.round(scrolled) >= 98) {
       document.querySelector(".progress-bar").style.width = "100%";
-      document.querySelector(".progress-bar").innerHTML = "100%";
+      // document.querySelector(".progress-bar").innerHTML = "100%";
     } else {
       document.querySelector(".progress-bar").style.width = scrolled + "%";
-      document.querySelector(".progress-bar").innerHTML =
-        Math.round(scrolled) + "%";
+      // document.querySelector(".progress-bar").innerHTML =
+      //   Math.round(scrolled) + "%";
     }
   else {
-    document.querySelector(".progress-bar").style.width = scrolled + "%";
+    // document.querySelector(".progress-bar").style.width = scrolled + "%";
     document.querySelector(".progress-bar").innerHTML = "";
   }
 };
