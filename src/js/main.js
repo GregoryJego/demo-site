@@ -25,7 +25,7 @@ const ScrollIndicator = () => {
     document.documentElement.clientHeight;
   let scrolled = (winScroll / height) * 100;
   if (Math.round(scrolled) > 0) {
-    if (Math.round(scrolled) < 2)
+    if (Math.round(scrolled) < 4)
       document.querySelector(".progress-bar").style.width = "0%";
     if (Math.round(scrolled) >= 98)
       document.querySelector(".progress-bar").style.width = "100%";
