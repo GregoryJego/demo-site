@@ -10,6 +10,7 @@ Demo website : responsive design (flexbox)
 3. Start the server `npm run dev`
 
 ## Features
-- Responsive
+- Responsive design
 - Click on the logo to activate the Dark mode
+- Click on a photo to zoom in
 
