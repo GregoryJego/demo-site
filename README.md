@@ -12,5 +12,5 @@ Demo website : responsive design (flexbox)
 ## Features
 - Responsive design
 - Click on the logo to activate the Dark mode
-- Click on a photo to zoom in
+- Click on a product to zoom in
 
